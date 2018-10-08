@@ -1,8 +1,7 @@
-package com.github.danilopaiva.webinar.kotlin
+package com.github.danilopaiva.demo.kotlin
 
 import org.junit.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 class Topic2 {

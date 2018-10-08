@@ -1,4 +1,4 @@
-package com.github.danilopaiva.webinar.kotlin
+package com.github.danilopaiva.demo.kotlin
 
 import org.junit.Test
 import kotlin.test.assertFalse
@@ -7,7 +7,7 @@ import kotlin.test.assertTrue
 
 class Topic4 {
 
-    data class Account(val id: String, var amount: Number)
+    private data class Account(val id: String, var amount: Number)
 
     @Test
     fun `methods in data class`() {
