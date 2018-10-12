@@ -1,17 +1,19 @@
 # Talking about Kotlin and TDD
 
-## TOPIC-1
+## KOTLIN
+
+### TOPIC-1
 
 **Many classes or functions per file**
 
-## TOPIC-2
+### TOPIC-2
 
 **Defining variables**
 
 * Type inference
 * Mutable and immutable variables
 
-## TOPIC-3
+### TOPIC-3
 
 **Defining functions**
 
@@ -20,7 +22,7 @@
 * Call in any order
 * put default values
 
-## TOPIC-4
+### TOPIC-4
 
 **Class**
 
@@ -34,13 +36,13 @@
 * Copy
 * Qualified this
 
-## TOPIC-5
+### TOPIC-5
 
 **Destructuring Declarations**
 
-## TOPIC-6
+### TOPIC-6
 
-### Helpers
+#### Helpers
 
 * String Template
 * to do functions
@@ -55,7 +57,7 @@
 * inline helpers
 * exceptions
 
-## TOPIC-7
+### TOPIC-7
 
 **Null Safety**
 
@@ -65,14 +67,14 @@
 * Elvis Operator
 * The !! operator
 
-## TOPIC-8
+### TOPIC-8
 
 **Equality**
 
 * Structural equality
 * Referential equality
 
-## TOPIC-9
+### TOPIC-9
 
 **Type Checks and Casts: 'is' and 'as'**
 
@@ -81,7 +83,7 @@
 * "Unsafe" cast operator
 * "Safe" (nullable) cast operator
 
-## TOPIC-10
+### TOPIC-10
 
 **Collections**
 * MutableList
@@ -89,8 +91,10 @@
 
 **Ranges**
 
-## Extension functions
-## Lambda
+### Extension functions
+### Lambda
+
+## TDD
 
 
 ## References
