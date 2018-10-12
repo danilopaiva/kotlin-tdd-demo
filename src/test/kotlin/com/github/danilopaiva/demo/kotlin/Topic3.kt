@@ -1,47 +1,64 @@
 package com.github.danilopaiva.demo.kotlin
 
 import org.junit.Test
+import java.time.LocalDateTime
+import java.util.*
 import kotlin.test.assertEquals
-import kotlin.test.assertNull
+import kotlin.test.assertNotNull
 
 class Topic3 {
 
+    //One line function
+
+    private fun sum1(a: Int, b: Int): Int {
+        return a + b
+    }
+
+    private fun sum2(a: Int, b: Int) = a + b
+
     @Test
-    fun `declare a variable as nullable`() {
-        //val x: String = null //compilation error
-        val x: String? = null
-        assertNull(x)
+    fun `sum1 and sum2 are equals`() {
+        val sum1 = sum1(1,1)
+        val sum2 = sum2(1,1)
+        assertEquals(sum1, sum2)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private data class Account(
+        val id: String,
+        var amount: Number = 0.0,
+        val createdAt: LocalDateTime = LocalDateTime.now()
+    )
+
+    //no overload method
+    private fun create(id: String = UUID.randomUUID().toString(), amount: Number) =
+    //call in any order
+        Account(amount = amount, id = id)
+
+    @Test
+    fun `create an account`() {
+        val account = create(amount = 10)
+        assertNotNull(account)
+        assertEquals(10, account.amount)
     }
 
     @Test
-    fun `checking for null in conditions`() {
-        val a: String? = null
-        val b = "something"
-
-        val c = if (a == null) { b } else { null }
-
-        assertEquals(b, c)
-    }
-
-    @Test
-    fun `safe calls`() {
-        val x: String? = null
-        //println(x.toUpperCase()) //compilation error
-        println(x?.toUpperCase())
-    }
-
-    @Test
-    fun `elvis operator`() {
-        val a: String? = null
-        val b = "something"
-        val c = a?.toUpperCase() ?: b
-
-        assertEquals(b, c)
-    }
-
-    @Test(expected = NullPointerException::class)
-    fun `the !! operator`() {
-        val a: String? = null
-        a!!.toUpperCase()
+    fun `create an account with id generated here`() {
+        val account = create(id = "new id", amount = 10)
+        assertNotNull(account)
+        assertEquals("new id", account.id)
+        assertEquals(10, account.amount)
     }
 }

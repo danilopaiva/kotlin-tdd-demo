@@ -1,19 +1,26 @@
 package com.github.danilopaiva.demo.kotlin
 
-import org.junit.Test
-import kotlin.test.assertEquals
+import java.util.*
 
-class Topic1 {
+data class Fan(
+    val name: String,
+    val team: Team,
+    val id: String = UUID.randomUUID().toString(),
+    var nickname: String = ""
+)
 
-    /*private fun sum(a: Int, b: Int): Int {
-        return a + b
-    }*/
+data class Team(val name: String)
 
-    private fun sum(a: Int, b: Int) = a + b
+fun main(args: Array<String>) {
+    val fan1 = getAnyFan()
 
-    @Test
-    fun `one plus one equals two`() {
-        val result = sum(a = 1, b = 1)
-        assertEquals(2, result)
-    }
+    method2()
+
+    print(fan1)
+}
+
+fun getAnyFan() = Fan("fan1", Team("Sao Paulo"))
+
+fun method2() {
+
 }

@@ -1,10 +1,8 @@
 # Talking about Kotlin and TDD
 
-## [TOPIC-1](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kt)
+## TOPIC-1
 
-**Defining functions**
-
-* One line function
+**Many classes or functions per file**
 
 ## TOPIC-2
 
@@ -13,7 +11,51 @@
 * Type inference
 * Mutable and immutable variables
 
-## TOPIC-3 
+## TOPIC-3
+
+**Defining functions**
+
+* One line function
+* No overload method
+* Call in any order
+* put default values
+
+## TOPIC-4
+
+**Class**
+
+* Call in any order
+* put default values
+
+**Data class**
+
+* Methods get/set/toString/hashCode
+* Update properties
+* Copy
+* Qualified this
+
+## TOPIC-5
+
+**Destructuring Declarations**
+
+## TOPIC-6
+
+### Helpers
+
+* String Template
+* to do functions
+* measureTimeMillis { } Nanos
+* deprecation message, levels and replacements
+* Erasing Erasure
+* Java to kotlin, kotlin to java decompiler
+
+**Unit Test**
+
+* full phrases for method names
+* inline helpers
+* exceptions
+
+## TOPIC-7
 
 **Null Safety**
 
@@ -23,31 +65,33 @@
 * Elvis Operator
 * The !! operator
 
-## TOPIC-4
+## TOPIC-8
 
-**Data class**
+**Equality**
 
-* Methods get/set/toString/hashCode
-* Update properties
-* Copy
-* Equals and reference
+* Structural equality
+* Referential equality
 
-## TOPIC-5 - Default values
+## TOPIC-9
 
-**Functions**
+**Type Checks and Casts: 'is' and 'as'**
 
-* No overload method
-* Call in any order
-* put default values
+* is and !is Operators
+* Smart Casts
+* "Unsafe" cast operator
+* "Safe" (nullable) cast operator
 
-**Classes**
+## TOPIC-10
 
-* Call in any order
-* put default values
+**Collections**
+* MutableList
+* Filter, map, reduce, fold, foldRight, any, none, all, first, find
 
-## TOPIC-5
+**Ranges**
 
-**Destructuring Declarations**
+## Extension functions
+## Lambda
+
 
 ## References
 

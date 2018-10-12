@@ -5,31 +5,45 @@ import java.time.LocalDateTime
 import java.util.*
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
+import kotlin.test.assertTrue
 
 class Topic5 {
 
     private data class Account(
-        val id: String,
+        val id: String = UUID.randomUUID().toString(),
         var amount: Number = 0.0,
         val createdAt: LocalDateTime = LocalDateTime.now()
     )
 
-    //no overload method
-    private fun create(id: String = UUID.randomUUID().toString(), amount: Number) =
-        //call in any order
-        Account(amount = amount, id = id)
-
     @Test
-    fun `create an account`() {
-        val account = create(amount = 10)
-        assertNotNull(account)
-        assertEquals(10, account.amount)
+    fun `destructuring an account`() {
+        val account = Account("id")
+
+        val (id, amount) = account
+
+        assertEquals("id", id)
+        assertEquals(0.0, amount)
     }
 
     @Test
-    fun `create an account with id generated here`() {
-        val account = create(id = "new id", amount = 10)
-        assertNotNull(account)
-        assertEquals(10, account.amount)
+    fun `destructuring an account 2`() {
+        val account = Account("id")
+
+        val (_, _, date) = account
+
+        assertTrue(date is LocalDateTime)
+        assertNotNull(date)
+    }
+
+    @Test
+    fun `destructuring an account list`() {
+        val accounts = listOf(
+            Account(),
+            Account()
+        )
+
+        for ((id, _, date) in accounts) {
+            println("Account $id created at $date")
+        }
     }
 }
