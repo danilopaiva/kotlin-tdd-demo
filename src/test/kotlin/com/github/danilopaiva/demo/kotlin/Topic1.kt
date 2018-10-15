@@ -9,7 +9,12 @@ data class Fan(
     var nickname: String = ""
 )
 
-data class Team(val name: String)
+enum class Team {
+    SAO_PAULO,
+    CRUZEIRO,
+    ATLETICO_MINEIRO,
+    OTHER
+}
 
 fun main(args: Array<String>) {
     val fan1 = getAnyFan()
@@ -19,7 +24,7 @@ fun main(args: Array<String>) {
     print(fan1)
 }
 
-fun getAnyFan() = Fan("fan1", Team("Sao Paulo"))
+fun getAnyFan() = Fan("fan1", Team.SAO_PAULO)
 
 fun method2() {
 

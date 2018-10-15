@@ -4,7 +4,10 @@
 
 ### TOPIC-1
 
-**Many classes or functions per file**
+**Kotlin file**
+
+* .kt
+* Many classes or functions per file
 
 ### TOPIC-2
 
@@ -18,19 +21,27 @@
 **Defining functions**
 
 * One line function
+* put default values
 * No overload method
 * Call in any order
-* put default values
 
 ### TOPIC-4
 
-**Class**
+**Data**
 
-* Call in any order
-* put default values
+* Visibility modifiers
+* Init
+* getters/setters
+* lazy
+
+**Interface**
+
+**Enum**
 
 **Data class**
 
+* put default values
+* Properties in any order to create
 * Methods get/set/toString/hashCode
 * Update properties
 * Copy
@@ -42,20 +53,20 @@
 
 ### TOPIC-6
 
-#### Helpers
+**Unit Test**
 
-* String Template
+* full phrases for method names
+* asserts
+* exceptions
+
+**Helpers**
+
+* String Template //TODO where put it?
 * to do functions
 * measureTimeMillis { } Nanos
 * deprecation message, levels and replacements
 * Erasing Erasure
 * Java to kotlin, kotlin to java decompiler
-
-**Unit Test**
-
-* full phrases for method names
-* inline helpers
-* exceptions
 
 ### TOPIC-7
 
@@ -74,7 +85,16 @@
 * Structural equality
 * Referential equality
 
-### TOPIC-9
+## TOPIC-9
+
+**Returning from a code block**
+
+* if else
+* try/catch
+* when
+* Unit, Nothing
+
+### TOPIC-10
 
 **Type Checks and Casts: 'is' and 'as'**
 
@@ -83,22 +103,43 @@
 * "Unsafe" cast operator
 * "Safe" (nullable) cast operator
 
-### TOPIC-10
+### TOPIC-11
+
+**Extension function**
+* Infix
+
+### TOPIC-12
+
+**Operator Overloading**
+* Increments and decrements
+* Binary operations
+
+### TOPIC-13
+
+**Lambda**
+
+### TOPIC-14
+
+**Ranges**
 
 **Collections**
 * MutableList
 * Filter, map, reduce, fold, foldRight, any, none, all, first, find
-
-**Ranges**
-
-### Extension functions
-### Lambda
+* Sorting
+* Partition
+* Zip
+* Group by
 
 ## TDD
 
 
 ## References
 
+### KOTLIN
+
 * [Kotlin](https://kotlinlang.org)
 * [Functional Kotlin](https://www.amazon.com.br/gp/product/B078JRKFYF/ref=oh_aui_d_detailpage_o01_?ie=UTF8&psc=1)
 * [Mike Matsumoto](https://github.com/mmatsumoto/kotlin-webinar)
+
+### TDD
+

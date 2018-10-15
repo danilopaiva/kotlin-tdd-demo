@@ -1,49 +1,38 @@
 package com.github.danilopaiva.demo.kotlin
 
 import org.junit.Test
-import java.time.LocalDateTime
-import java.util.*
 import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertTrue
 
 class Topic5 {
 
-    private data class Account(
-        val id: String = UUID.randomUUID().toString(),
-        var amount: Number = 0.0,
-        val createdAt: LocalDateTime = LocalDateTime.now()
-    )
-
     @Test
-    fun `destructuring an account`() {
-        val account = Account("id")
+    fun `destructuring a fan`() {
+        val fan = Fan(name = "joao", team = Team.OTHER)
 
-        val (id, amount) = account
+        val (name, team) = fan
 
-        assertEquals("id", id)
-        assertEquals(0.0, amount)
+        assertEquals(Team.OTHER, team)
+        assertEquals("joao", name)
     }
 
     @Test
-    fun `destructuring an account 2`() {
-        val account = Account("id")
+    fun `destructuring a fan 2`() {
+        val fan = Fan(name = "joao", team = Team.OTHER)
 
-        val (_, _, date) = account
+        val (_, _, id) = fan
 
-        assertTrue(date is LocalDateTime)
-        assertNotNull(date)
+        assertEquals(fan.id, id)
     }
 
     @Test
     fun `destructuring an account list`() {
-        val accounts = listOf(
-            Account(),
-            Account()
+        val fans = listOf(
+            Fan(name = "joao", team = Team.ATLETICO_MINEIRO),
+            Fan(name = "paulo", team = Team.SAO_PAULO)
         )
 
-        for ((id, _, date) in accounts) {
-            println("Account $id created at $date")
+        for ((name, team) in fans) {
+            println("$name really likes $team")
         }
     }
 }

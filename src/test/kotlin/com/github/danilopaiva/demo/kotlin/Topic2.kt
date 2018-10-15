@@ -19,13 +19,13 @@ class Topic2 {
 
     @Test
     fun `mutable and immutable variables`() {
-        var a = 1 //mutable
-        val b = 1 //immutable
+        val a = 1 //immutable
+        var b = 1 //mutable
 
-        a += 1
-        //b += 1 // val cannot be reassigned
+        //a += 1 // val cannot be reassigned
+        b += 1
 
-        assertEquals(2, a)
-        assertEquals(1, b)
+        assertEquals(1, a)
+        assertEquals(2, b)
     }
 }

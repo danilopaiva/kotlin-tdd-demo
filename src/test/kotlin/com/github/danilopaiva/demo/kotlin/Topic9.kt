@@ -1,53 +1,58 @@
 package com.github.danilopaiva.demo.kotlin
 
 import org.junit.Test
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class Topic9 {
 
     @Test
-    fun `is operator`() {
-        val obj: Any? = ""
+    fun test() {
+        assertTrue {
+            get(2)
+        }
 
-        if (obj is String) { //Smart cast
-            obj.toUpperCase() //Doesn't use ?
+        assertFalse {
+            get("")
+        }
+
+        assertTrue {
+            get(1L)
         }
     }
 
-    @Test
-    fun `!is operator`() {
-        val obj: Any? = 1
-
-        if (obj !is String) {
-            print("Not a String")
-            assertTrue(obj is Int)
+    private fun get(x: Int) =
+        if (x % 2 == 0) {
+            println("true")
+            true
+        } else {
+            println("false")
+            false
         }
-    }
 
-    @Test
-    fun `smart cast`() {
-        val x: Any? = 10
+    private fun get(x: String) =
+        try {
+            2 / x.length
+            true
+        } catch (e: ArithmeticException) {
+            println("Error!")
+            false
+        }
+
+    private fun get(x: Any) =
         when (x) {
-            is Int -> {
-                println("Int: ${x.plus(10)}")
-            }
             is String -> {
                 println("String: ${x.toUpperCase()}")
+                false
             }
+            is Int -> {
+                println("Int: ${x.plus(1)}")
+                false
+            }
+            is Long -> {
+                println("Long: ${x.minus(10)}")
+                true
+            }
+            else -> false
         }
-    }
-
-    @Test
-    fun `unsafe cast operator`() {
-        val x: Any? = ""
-        val y: String? = x as String
-        assertTrue(y is String)
-    }
-
-    @Test
-    fun `safe cast operator`() {
-        val x: Any = 1
-        val y: String? = x as? String
-        assertTrue(y == null)
-    }
 }
