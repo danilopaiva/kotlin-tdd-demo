@@ -123,7 +123,8 @@
 **Ranges**
 
 **Collections**
-* MutableList
+
+* List, mutableList, map, mutableMap
 * Filter, map, reduce, fold, foldRight, any, none, all, first, find
 * Sorting
 * Partition
