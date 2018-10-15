@@ -34,6 +34,7 @@ class Topic10 {
             is String -> {
                 println("String: ${x.toUpperCase()}")
             }
+            x as Int % 2 == 1 -> println("Crazy!")
         }
     }
 

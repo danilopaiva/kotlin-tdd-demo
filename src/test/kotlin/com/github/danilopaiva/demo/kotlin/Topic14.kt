@@ -68,6 +68,19 @@ class Topic14 {
     }
 
     @Test
+    fun others() {
+        setOf<Int>()
+        mutableSetOf<Int>()
+        emptySet<Int>()
+
+        linkedSetOf<Int>()
+
+        mapOf<Int, Int>()
+        mutableMapOf<Int, Int>()
+        emptyMap<Int, Int>()
+    }
+
+    @Test
     fun `mutable map`() {
         val map = mutableMapOf(
             Pair("a", 1),

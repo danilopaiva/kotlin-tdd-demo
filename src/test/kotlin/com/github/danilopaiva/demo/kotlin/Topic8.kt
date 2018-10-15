@@ -10,7 +10,7 @@ class Topic8 {
         val a = "opa"
         val b = "opa"
 
-        //assertTrue(a.equals(b))
+//        assertTrue(a.equals(b))
         assertTrue(a == b)
     }
 
@@ -19,7 +19,7 @@ class Topic8 {
         val a = "a"
         val b = "b"
 
-        //assertTrue(!a.equals(b))
+//        assertTrue(!a.equals(b))
         assertTrue(a != b)
     }
 

@@ -45,7 +45,7 @@ open class NiceClassImpl(value: Int = 0) : NiceClass() {
     companion object {
         const val PI = 3.14
 
-        fun method2(){}
+        fun method2() {}
     }
 }
 

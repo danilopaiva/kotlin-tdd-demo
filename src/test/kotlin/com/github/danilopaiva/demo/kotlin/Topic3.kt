@@ -29,18 +29,18 @@ class Topic3 {
 
     @Test
     fun `no overload`() {
-        method(1, "B")
+        method(1, "b")
 
-        method(1)
+        method(2)
     }
 
     @Test
     fun `call in any order`() {
-        method(a = 1, b = "B")
+        method(a = 1, b = "b")
 
-        method(b = "B", a = 1)
+        method(b = "b", a = 2)
 
-        method(a = 1)
+        method(a = 3)
 
         //method(b = "B") //Compilation error
     }

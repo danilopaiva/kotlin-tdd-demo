@@ -9,7 +9,7 @@ class Topic7 {
 
     @Test
     fun `declare a variable as nullable`() {
-        //val x: String = null //compilation error
+//        val x: String = null //compilation error
         val x: String? = null
         assertNull(x)
     }
@@ -19,16 +19,13 @@ class Topic7 {
         val a: String? = null
         val b = "something"
 
-        val c = if (a == null) { b } else { null }
+        val c = if (a == null) {
+            b
+        } else {
+            a.toUpperCase()
+        }
 
         assertEquals(b, c)
-    }
-
-    @Test
-    fun `safe calls`() {
-        val x: String? = null
-        //println(x.toUpperCase()) //compilation error
-        println(x?.toUpperCase())
     }
 
     @Test
@@ -38,6 +35,13 @@ class Topic7 {
         val c = a?.toUpperCase() ?: b
 
         assertEquals(b, c)
+    }
+
+    @Test
+    fun `safe calls`() {
+        val x: String? = null
+        //println(x.toUpperCase()) //compilation error
+        println(x?.toUpperCase())
     }
 
     @Test
