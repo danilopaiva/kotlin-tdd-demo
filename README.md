@@ -1,5 +1,8 @@
 # Talking about Kotlin and TDD
 
+[![Build Status](https://travis-ci.org/danilopaiva/kotlin-tdd-demo.svg?branch=master)](https://travis-ci.org/danilopaiva/kotlin-tdd-demo)
+[![codecov](https://codecov.io/gh/danilopaiva/kotlin-tdd-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/danilopaiva/kotlin-tdd-demo)
+
 ## KOTLIN
 
 ### [TOPIC-1](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kthttps://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kt)
