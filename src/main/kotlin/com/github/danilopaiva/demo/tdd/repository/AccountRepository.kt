@@ -2,9 +2,13 @@ package com.github.danilopaiva.demo.tdd.repository
 
 import com.github.danilopaiva.demo.tdd.domain.Account
 
-class AccountRepository {
+interface AccountRepository {
 
-    companion object {
-        val accounts = mapOf<String, Account>()
-    }
+    fun find(id: String): Account
+
+    fun save(account: Account): Account
+
+    fun update(id: String): Account
+
+    fun delete(id: String)
 }
