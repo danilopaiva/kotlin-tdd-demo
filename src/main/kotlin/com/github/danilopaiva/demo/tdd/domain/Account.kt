@@ -1,8 +1,12 @@
 package com.github.danilopaiva.demo.tdd.domain
 
 import com.github.danilopaiva.demo.tdd.repository.AccountRepository
+import java.util.*
 
-class Account : BaseAccount {
+data class Account(
+    val id: String = UUID.randomUUID().toString(),
+    val amount: Number = 0
+) : BaseAccount {
 
     override fun create(repository: AccountRepository) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

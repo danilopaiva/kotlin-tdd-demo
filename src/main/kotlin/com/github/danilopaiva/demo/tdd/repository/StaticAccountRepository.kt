@@ -1,23 +1,26 @@
 package com.github.danilopaiva.demo.tdd.repository
 
 import com.github.danilopaiva.demo.tdd.domain.Account
+import com.github.danilopaiva.demo.tdd.exception.NotFoundException
 
-class StaticAccountRepository: AccountRepository {
+class StaticAccountRepository : AccountRepository {
 
     companion object {
-        val accounts = mapOf<String, Account>()
+        val accounts = mutableMapOf<String, Account>()
     }
 
     override fun find(id: String): Account {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return accounts[id] ?: throw NotFoundException(Account::class.java.simpleName, id)
     }
 
     override fun save(account: Account): Account {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        accounts[account.id] = account
+        return account
     }
 
-    override fun update(id: String): Account {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun update(account: Account): Account {
+        accounts[account.id] = account
+        return account
     }
 
     override fun delete(id: String) {
