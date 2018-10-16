@@ -4,7 +4,7 @@ import org.junit.Test
 
 class AccountTest {
 
-    @Test
+    /*@Test
     fun `should create an account`() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -32,5 +32,5 @@ class AccountTest {
     @Test
     fun `shouldn't withdraw any value an account doesn't exist`() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    }*/
 }
