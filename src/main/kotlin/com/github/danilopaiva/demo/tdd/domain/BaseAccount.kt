@@ -6,7 +6,7 @@ interface BaseAccount {
 
     fun create(repository: AccountRepository)
 
-    fun deposit(repository: AccountRepository, value: Number)
+    fun deposit(repository: AccountRepository, value: Double)
 
-    fun withdraw(repository: AccountRepository, value: Number)
+    fun withdraw(repository: AccountRepository, value: Double)
 }

@@ -41,11 +41,11 @@ class StaticAccountRepositoryTest {
 
     @Test
     fun `should to update an account`() {
-        val updateAccount = account.copy(amount = 10.0)
+        account.amount = 10.0
 
-        repository.update(updateAccount)
+        repository.update(account)
 
-        val accountFound = repository.find(updateAccount.id)
+        val accountFound = repository.find(account.id)
 
         assertEquals(account.id, accountFound.id)
         assertEquals(10.0, accountFound.amount)
