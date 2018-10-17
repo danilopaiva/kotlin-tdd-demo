@@ -59,14 +59,4 @@ class AccountTest {
             account.withdraw(repository, 100.0)
         }
     }
-
-    /*@Test
-    fun `shouldn't deposit any value an account doesn't exist`() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    @Test
-    fun `shouldn't withdraw any value an account doesn't exist`() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }*/
 }
