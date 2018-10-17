@@ -33,7 +33,7 @@ Therefore the examples in this project are simple but might not make sense witho
 
 ### [TOPIC-4](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic4.kt)
 
-**Data**
+**Class**
 
 * Visibility modifiers
 * Init

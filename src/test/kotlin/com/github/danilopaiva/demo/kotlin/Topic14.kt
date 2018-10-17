@@ -64,7 +64,7 @@ class Topic14 {
         val list = mutableListOf(1, 2, 3)
         list[0] = 2
         assertEquals(3, list.size)
-        assertTrue(list[0] == 2)
+        assertEquals(list[0], 2)
     }
 
     @Test
@@ -88,7 +88,7 @@ class Topic14 {
         )
         map["c"] = 3
         assertEquals(3, map.size)
-        assertTrue(map["b"] == 2)
+        assertEquals(map["b"], 2)
     }
 
     @Test

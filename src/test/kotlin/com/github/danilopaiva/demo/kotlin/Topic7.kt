@@ -17,31 +17,30 @@ class Topic7 {
     @Test
     fun `checking for null in conditions`() {
         val a: String? = null
-        val b = "something"
+        //a.toUpperCase() //compilation error
 
-        val c = if (a == null) {
-            b
+        val b = if (a == null) {
+            "a is null"
         } else {
             a.toUpperCase()
         }
 
-        assertEquals(b, c)
-    }
-
-    @Test
-    fun `elvis operator`() {
-        val a: String? = null
-        val b = "something"
-        val c = a?.toUpperCase() ?: b
-
-        assertEquals(b, c)
+        assertEquals("a is null", b)
     }
 
     @Test
     fun `safe calls`() {
         val x: String? = null
-        //println(x.toUpperCase()) //compilation error
+        //println(x.toUpperCase())
         println(x?.toUpperCase())
+    }
+
+    @Test
+    fun `elvis operator`() {
+        val a: String? = null
+        val b = a?.toUpperCase() ?: "a is null"
+
+        assertEquals("a is null", b)
     }
 
     @Test
