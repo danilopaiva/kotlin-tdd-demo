@@ -26,7 +26,7 @@ open class NiceClassImpl(value: Int = 0) : NiceClass() {
         println("Value: $value")
     }
 
-    var a: Int = 0
+    var a = 0
         get() = field * 2
         set(value) {
             field = value * 2
@@ -51,7 +51,7 @@ open class NiceClassImpl(value: Int = 0) : NiceClass() {
 
 interface NiceInterface {
     fun method() {
-
+        1 * 1
     }
 }
 
@@ -124,6 +124,7 @@ class Topic4 {
         val fan2 = fan.copy(name = "Paulo")
 
         assertEquals(fan.id, fan2.id)
+        assertEquals(Team.CRUZEIRO, fan2.team)
     }
 
     @Test
