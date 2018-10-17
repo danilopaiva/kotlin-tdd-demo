@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.org/danilopaiva/kotlin-tdd-demo.svg?branch=master)](https://travis-ci.org/danilopaiva/kotlin-tdd-demo)
 [![codecov](https://codecov.io/gh/danilopaiva/kotlin-tdd-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/danilopaiva/kotlin-tdd-demo)
 
+The main goal of this project is to show the basics of the programming language Kotlin and to demonstrate how to put into practice the TDD methodology while using Kotlin.
+Therefore the examples in this project are simple but might not make sense without participation in the lecture. However, I’ll provide access to the presentation in the root of this project as complementary material.X
+
 ## KOTLIN
 
 ### [TOPIC-1](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kthttps://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kt)
@@ -30,7 +33,7 @@
 
 ### [TOPIC-4](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic4.kt)
 
-**Data**
+**Class**
 
 * Visibility modifiers
 * Init
@@ -140,13 +143,29 @@
 
 ## TDD
 
+Criar um repositório e o domínio que simule uma conta bancária. A conta deve realizar as operações de depósito e saque, respeitando as seguintes regras:
+
+**Repository:**
+* Deve salvar uma conta
+* Deve buscar uma conta
+* Deve atualizar uma conta
+
+**Domain**
+* Deve criar uma conta
+* Deve depositar um valor na conta
+* Não deve realizar deposito quando o status da conta não está ativo
+* Deve sacar um valor da conta
+* O saldo da conta nunca pode ser inferior a zero
+
 ## References
 
 ### KOTLIN
 
-* [Kotlin](https://kotlinlang.org)
-* [Functional Kotlin](https://www.amazon.com.br/gp/product/B078JRKFYF/ref=oh_aui_d_detailpage_o01_?ie=UTF8&psc=1)
+* [Kotlin](https://kotlinlang.org) - Official Page
+* [Functional Kotlin](https://www.amazon.com.br/gp/product/B078JRKFYF/ref=oh_aui_d_detailpage_o01_?ie=UTF8&psc=1) - Extend your OOP skills and implement Functional techniques in Kotlin and Arrow
 * [Mike Matsumoto](https://github.com/mmatsumoto/kotlin-webinar)
 
 ### TDD
 
+* [Test-Driven Development](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530/ref=sr_1_3?ie=UTF8&qid=1539657422&sr=8-3&keywords=test+driven+development) - By Example, Kent Beck
+* [Test-Driven Development](https://www.casadocodigo.com.br/products/livro-tdd) - Teste e Design no Mundo Real
