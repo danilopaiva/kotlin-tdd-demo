@@ -4,11 +4,13 @@
 [![codecov](https://codecov.io/gh/danilopaiva/kotlin-tdd-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/danilopaiva/kotlin-tdd-demo)
 
 The main goal of this project is to show the basics of the programming language Kotlin and to demonstrate how to put into practice the TDD methodology while using Kotlin.
-Therefore the examples in this project are simple but might not make sense without participation in the lecture. However, I’ll provide access to the presentation in the root of this project as complementary material.X
+Therefore the examples in this project are simple but might not make sense without participation in the lecture. However, I’ll provide access to the presentation in the root of this project as complementary material.
+
+Click [here](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/presentation.pdf) to see the presentation.
 
 ## KOTLIN
 
-### [TOPIC-1](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kthttps://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kt)
+### [TOPIC-1](https://github.com/danilopaiva/kotlin-tdd-demo/blob/master/src/test/kotlin/com/github/danilopaiva/demo/kotlin/Topic1.kt)
 
 **Kotlin file**
 
