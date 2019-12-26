@@ -1,0 +1,10 @@
+{
+    "dataSource": "prs",
+    "prefix": "",
+    "onlyMilestones": false,
+    "groupBy": {
+        "Enhancements:": ["enhancement", "internal"],
+        "Bug Fixes:": ["bug"]
+    },
+    "changelogFilename": "CHANGELOG.md"
+}
